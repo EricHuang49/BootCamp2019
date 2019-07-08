@@ -1,0 +1,130 @@
+Last login: Mon Jul  1 08:51:29 on ttys000
+(base) Jinchengs-MacBook-Pro:~ eric$ cd /Users/Eric/Desktop/OSE Lab
+-bash: cd: /Users/Eric/Desktop/OSE: No such file or directory
+(base) Jinchengs-MacBook-Pro:~ eric$ cd /Users/Eric/Desktop/'OSE Lab'
+(base) Jinchengs-MacBook-Pro:OSE Lab eric$ 
+(base) Jinchengs-MacBook-Pro:OSE Lab eric$ git clone https://github.com/EricHuang49/BootCamp2019.git
+Cloning into 'BootCamp2019'...
+remote: Enumerating objects: 143, done.
+remote: Total 143 (delta 0), reused 0 (delta 0), pack-reused 143
+Receiving objects: 100% (143/143), 6.09 MiB | 9.90 MiB/s, done.
+Resolving deltas: 100% (41/41), done.
+(base) Jinchengs-MacBook-Pro:OSE Lab eric$ ls
+BootCamp2019	Week 1
+(base) Jinchengs-MacBook-Pro:OSE Lab eric$ git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+(base) Jinchengs-MacBook-Pro:OSE Lab eric$ cd BootCamp2019/
+(base) Jinchengs-MacBook-Pro:BootCamp2019 eric$ git remote -v
+origin	https://github.com/EricHuang49/BootCamp2019.git (fetch)
+origin	https://github.com/EricHuang49/BootCamp2019.git (push)
+(base) Jinchengs-MacBook-Pro:BootCamp2019 eric$ git remote add upstream https://github.com/OpenSourceEcon/BootCamp2019.git
+(base) Jinchengs-MacBook-Pro:BootCamp2019 eric$ git remote -v
+origin	https://github.com/EricHuang49/BootCamp2019.git (fetch)
+origin	https://github.com/EricHuang49/BootCamp2019.git (push)
+upstream	https://github.com/OpenSourceEcon/BootCamp2019.git (fetch)
+upstream	https://github.com/OpenSourceEcon/BootCamp2019.git (push)
+(base) Jinchengs-MacBook-Pro:BootCamp2019 eric$ git fetch upstream
+remote: Enumerating objects: 46, done.
+remote: Counting objects: 100% (46/46), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 54 (delta 16), reused 43 (delta 15), pack-reused 8
+Unpacking objects: 100% (54/54), done.
+From https://github.com/OpenSourceEcon/BootCamp2019
+ * [new branch]      master     -> upstream/master
+(base) Jinchengs-MacBook-Pro:BootCamp2019 eric$ git merge upstream/master
+Updating a975650..4656abc
+Fast-forward
+ Computation/README.md                          |  129 +
+ Computation/Wk1_PyIntro/DataVisualization.pdf  |  Bin 0 -> 955409 bytes
+ Computation/Wk1_PyIntro/Exceptions_FileIO.pdf  |  Bin 0 -> 283363 bytes
+ Computation/Wk1_PyIntro/MatplotlibIntro.pdf    |  Bin 0 -> 1034514 bytes
+ Computation/Wk1_PyIntro/NumpyIntro.pdf         |  Bin 0 -> 430741 bytes
+ Computation/Wk1_PyIntro/ObjectOriented.pdf     |  Bin 0 -> 282328 bytes
+ Computation/Wk1_PyIntro/StandardLibrary.pdf    |  Bin 0 -> 400455 bytes
+ Econ/Wk1_DP/DynProgIntpl.ipynb                 | 9705 ++++++++++++++++++++++++
+ Econ/Wk1_DP/DynProg_Evans.pdf                  |  Bin 0 -> 512960 bytes
+ Econ/Wk1_DP/EasyIntroToDiscreteVFI_blanc.ipynb |  734 ++
+ 10 files changed, 10568 insertions(+)
+ create mode 100644 Computation/README.md
+ create mode 100644 Computation/Wk1_PyIntro/DataVisualization.pdf
+ create mode 100644 Computation/Wk1_PyIntro/Exceptions_FileIO.pdf
+ create mode 100644 Computation/Wk1_PyIntro/MatplotlibIntro.pdf
+ create mode 100644 Computation/Wk1_PyIntro/NumpyIntro.pdf
+ create mode 100644 Computation/Wk1_PyIntro/ObjectOriented.pdf
+ create mode 100644 Computation/Wk1_PyIntro/StandardLibrary.pdf
+ create mode 100644 Econ/Wk1_DP/DynProgIntpl.ipynb
+ create mode 100644 Econ/Wk1_DP/DynProg_Evans.pdf
+ create mode 100644 Econ/Wk1_DP/EasyIntroToDiscreteVFI_blanc.ipynb
+(base) Jinchengs-MacBook-Pro:BootCamp2019 eric$ git push origin
+Username for 'https://github.com': ls    	
+Password for 'https://ls@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/EricHuang49/BootCamp2019.git/'
+(base) Jinchengs-MacBook-Pro:BootCamp2019 eric$ ls
+Computation			OSE_Lab_topic_detail_2019.pdf
+Econ				README.md
+Intro				Tutorials
+(base) Jinchengs-MacBook-Pro:BootCamp2019 eric$ cd Econ/Wk1_DP/
+(base) Jinchengs-MacBook-Pro:Wk1_DP eric$ jupyter
+usage: jupyter [-h] [--version] [--config-dir] [--data-dir] [--runtime-dir]
+               [--paths] [--json]
+               [subcommand]
+jupyter: error: one of the arguments --version subcommand --config-dir --data-dir --runtime-dir --paths is required
+(base) Jinchengs-MacBook-Pro:Wk1_DP eric$ git fetch upstream
+remote: Enumerating objects: 65, done.
+remote: Counting objects: 100% (65/65), done.
+remote: Compressing objects: 100% (37/37), done.
+remote: Total 65 (delta 28), reused 65 (delta 28), pack-reused 0
+Unpacking objects: 100% (65/65), done.
+From https://github.com/OpenSourceEcon/BootCamp2019
+   4656abc..66b3f22  master     -> upstream/master
+(base) Jinchengs-MacBook-Pro:Wk1_DP eric$ git merge upstream/master
+Updating 4656abc..66b3f22
+Fast-forward
+ Computation/README.md                              |  17 ++++---
+ .../{Wk1_DifIntLin => Wk1_DifInt}/ACME_NumDiff.pdf | Bin
+ Computation/Wk1_DifInt/DifInt_probset1a.pdf        | Bin 0 -> 45652 bytes
+ Computation/Wk1_DifInt/NewtonsMethod.pdf           | Bin 0 -> 496429 bytes
+ .../{Wk1_DifIntLin => Wk1_DifInt}/NumIntegr.ipynb  |   0
+ .../images/Integration_num_trapezes_notation.png   | Bin
+ .../images/MidRiemann2.png                         | Bin
+ .../images/MonteCarloCircle.png                    | Bin
+ .../images/NumInt_ComparisonWHNB1000.png           | Bin
+ .../images/NumInt_Discrepancy.png                  | Bin
+ .../images/NumInt_TrapezoidGrid.png                | Bin
+ .../images/Riemann_sum_convergence.png             | Bin
+ .../images/Simpsons_method_illustration.png        | Bin
+ .../images/Simpsonsrule2.gif                       | Bin
+ Computation/Wk1_DifIntLin/plane.npy                | Bin 272 -> 0 bytes
+ Computation/Wk1_DifIntLin/productMix.npz           | Bin 870 -> 0 bytes
+ Computation/Wk1_PyIntro/FARS.npy                   | Bin 0 -> 3557024 bytes
+ Computation/Wk1_PyIntro/MLB.npy                    | Bin 0 -> 24872 bytes
+ Computation/Wk1_PyIntro/PyIntro_probset.pdf        | Bin 0 -> 49282 bytes
+ Computation/Wk1_PyIntro/box.py                     |  56 +++++++++++++++++++++
+ Computation/Wk1_PyIntro/countries.npy              | Bin 0 -> 720 bytes
+ Computation/Wk1_PyIntro/grid.npy                   | Bin 0 -> 3280 bytes
+ Computation/Wk1_PyIntro/placeholder.txt            |   1 -
+ 23 files changed, 65 insertions(+), 9 deletions(-)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/ACME_NumDiff.pdf (100%)
+ create mode 100644 Computation/Wk1_DifInt/DifInt_probset1a.pdf
+ create mode 100644 Computation/Wk1_DifInt/NewtonsMethod.pdf
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/NumIntegr.ipynb (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/Integration_num_trapezes_notation.png (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/MidRiemann2.png (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/MonteCarloCircle.png (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/NumInt_ComparisonWHNB1000.png (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/NumInt_Discrepancy.png (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/NumInt_TrapezoidGrid.png (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/Riemann_sum_convergence.png (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/Simpsons_method_illustration.png (100%)
+ rename Computation/{Wk1_DifIntLin => Wk1_DifInt}/images/Simpsonsrule2.gif (100%)
+ delete mode 100644 Computation/Wk1_DifIntLin/plane.npy
+ delete mode 100644 Computation/Wk1_DifIntLin/productMix.npz
+ create mode 100644 Computation/Wk1_PyIntro/FARS.npy
+ create mode 100644 Computation/Wk1_PyIntro/MLB.npy
+ create mode 100644 Computation/Wk1_PyIntro/PyIntro_probset.pdf
+ create mode 100644 Computation/Wk1_PyIntro/box.py
+ create mode 100644 Computation/Wk1_PyIntro/countries.npy
+ create mode 100644 Computation/Wk1_PyIntro/grid.npy
+ delete mode 100644 Computation/Wk1_PyIntro/placeholder.txt
+(base) Jinchengs-MacBook-Pro:Wk1_DP eric$ 
