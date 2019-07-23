@@ -1,0 +1,306 @@
+%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,english]{article}
+\usepackage{ae,aecompl}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{babel}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage[authoryear]{natbib}
+\onehalfspacing
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=false]
+ {hyperref}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{definition}
+\newtheorem{xca}{\protect\exercisename}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{array}
+\hypersetup{colorlinks=true,citecolor=blue, linkcolor=black}
+
+\makeatother
+
+\providecommand{\exercisename}{Exercise}
+
+\begin{document}
+\title{Problem Set: Introduction to Measure Theory}
+\author{}
+\date{}
+\maketitle
+
+\section{Measure Spaces}
+\begin{xca}
+$ $
+\begin{itemize}
+\item $\ensuremath{\mathcal{G}_{1}=\{A:A\subset\mathbb{R},A\text{ open }\}}$
+is not closed under complements. For example, $\left(0,+\infty\right)$
+is an open set in $\mathbb{R}$ so it is included in $\mathcal{G}_{1}$,
+but its complement $\left(-\infty,0\right]$ is not open. Thus $\mathcal{G}_{1}$
+is not an algebra.
+\item If $\emptyset$ is not included in $\mathcal{G}_{2}$, then it is
+not an algebra by definition. If $\emptyset$ is included in $\ensuremath{\mathcal{G}_{2}=\{A:A\text{ is a finite union of intervals of the form }(a,b],(-\infty,b],\text{ and }(a,\infty)\}}$,
+then it is an algebra as it is closed under complements (the complement
+would be a finite intersection of $(-\infty,a]\cup(b,\infty),(b,\infty)\text{ and }(-\infty,a]$,
+which is either empty or could be written as a finite union of the
+above forms) and closed under finite unions (a finite union of the
+sets that are finite unions of intervals of the form$(\mathrm{a},\mathrm{b}],(-\infty,\mathrm{b}],\text{ and }(\mathrm{a},\infty)$
+is still a finite union of intervals of these forms). It is not a
+$\sigma-$algebra. For example, the countable union
+\[
+\cup_{n=2}^{\infty}\left(0,\frac{n-1}{n}\right]=\left(0,1\right)
+\]
+is not in $\mathcal{G}_{2}$.
+\item $\ensuremath{\mathcal{G}_{3}=\{A:A\text{ is a countable union of }(\mathrm{a},\mathrm{b}],(-\infty,\mathrm{b}],\text{ and }(\mathrm{a},\infty)\}}$
+is a $\sigma-$algebra if we include $\emptyset$ in it. The proof
+follows similarly as above but now ``finite'' applies more generally
+to ``countable'' too.
+\end{itemize}
+\end{xca}
+%
+\begin{xca}
+$ $
+\begin{itemize}
+\item If $\ensuremath{\mathcal{A}}$ is a $\sigma-$algebra, then $\emptyset\in\mathcal{A}$.
+The complement of $\emptyset$, $X$ must also be in $\mathcal{A}$.
+Thus $\ensuremath{\{0,X\}\subset\mathcal{A}}$.
+\item Note that if $S\subset X$, then $S^{c}=X\setminus S\subset X$. Also
+note that finite unions of subsets of $X$ is still a subset of $X$.
+If $\mathcal{A}$ is a $\sigma-$algebra generated from some subsets
+of $X$, then $\mathcal{A\subset}\mathcal{P}(X)$ as $\ensuremath{\mathcal{P}(X)=\{A:A\subset X\}}$
+contains all the subsets of $X$ by definition.
+\end{itemize}
+\end{xca}
+%
+\begin{xca}
+$ $
+\begin{itemize}
+\item Since $\emptyset\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha$,
+we thus have $\emptyset\in\ensuremath{\cap_{\alpha}\mathcal{S}_{\alpha}}$.
+\item Pick any $X\in\ensuremath{\cap_{\alpha}\mathcal{S}_{\alpha}}$ and
+hence $X\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha$. Since
+a $\sigma-$algebra is closed under complements, we have $X^{c}\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha$.
+Therefore, $X^{c}\in\cap_{\alpha}\mathcal{S}_{\alpha}$.
+\item Pick countable sets $X_{1},X_{2},\ldots\in\ensuremath{\cap_{\alpha}\mathcal{S}_{\alpha}}$,
+and hence $X_{i}\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha,\forall i$.
+Since a $\sigma-$algebra is closed under countable unions, thus $\cup_{i}X_{i}\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha$.
+Therefore, $\cup_{i}X_{i}\in\cap_{\alpha}\mathcal{S}_{\alpha}$.
+\end{itemize}
+The above propositions mean that $\cap_{\alpha}\mathcal{S}_{\alpha}$
+is a $\sigma-$algebra.
+\end{xca}
+%
+\begin{xca}
+$ $
+\begin{itemize}
+\item Let $C=B\setminus A=B\cap A^{c}$. $\mu$ is a nonnegative measure
+and hence $\mu\left(C\right)\geq0$. Note that $B=A\cup C$ and $A\cap C=\emptyset$.
+Therefore
+\[
+\mu\left(B\right)=\mu\left(A\right)+\mu\left(C\right)\geq\mu\left(A\right).
+\]
+\item Let $B_{n}=\cup_{i=1}^{n}A_{i}$. Note that $B_{1}\subset B_{2}\subset B_{3}\subset\cdots$.
+By Theorem 1.25 (i), we have $\ensuremath{\lim_{n\rightarrow\infty}\mu\left(B_{n}\right)}=\mu\left(\cup_{i=1}^{\infty}B_{i}\right)$.
+\begin{itemize}
+\item Note that $\cup_{i=1}^{\infty}B_{i}=\cup_{i=1}^{\infty}A_{i}$, hence
+$\mu\left(\cup_{i=1}^{\infty}B_{i}\right)=\mu\left(\cup_{i=1}^{\infty}A_{i}\right)$.
+\item Note that $\lim_{n\rightarrow\infty}\mu\left(B_{n}\right)=\lim_{n\rightarrow\infty}\mu\left(\cup_{i=1}^{n}A_{i}\right)\leq\lim_{n\rightarrow\infty}\sum_{i=1}^{n}\mu\left(A_{i}\right)=\sum_{i=1}^{\infty}\mu\left(A_{i}\right)$.
+\item Therefore, $\mu\left(\cup_{i=1}^{\infty}A_{i}\right)\leq\sum_{i=1}^{\infty}\mu\left(A_{i}\right)$.
+\end{itemize}
+\end{itemize}
+\end{xca}
+%
+\begin{xca}
+$ $
+\begin{itemize}
+\item $\lambda\left(\emptyset\right)=\mu\left(\emptyset\cap B\right)=\mu\left(\emptyset\right)=0$.
+\item For any $\ensuremath{\left\{ A_{i}\right\} _{i=1}^{\infty}\subset\mathcal{S}\mathrm{s.t.}A_{i}\cap A_{j}=\emptyset\forall i\neq j}$,
+we have
+\begin{align*}
+\lambda\left(\cup_{i=1}^{\infty}A_{i}\right) & =\mu\left(\left(\cup_{i=1}^{\infty}A_{i}\right)\cap B\right)=\mu\left(\cup_{i=1}^{\infty}\left(A_{i}\cap B\right)\right)\\
+ & =\sum_{i=1}^{\infty}\mu\left(A_{i}\cap B\right)=\sum_{i=1}^{\infty}\lambda\left(A_{i}\right).
+\end{align*}
+\end{itemize}
+\end{xca}
+%
+\begin{xca}
+Let $B_{n}=A_{1}\cap A_{n}^{c}$. Since
+\[
+\cup_{i=1}^{\infty}B_{i}=\cup_{i=1}^{\infty}\left(A_{1}\cap A_{i}^{c}\right)=A_{1}\cap\left(\cup_{i=1}^{\infty}A_{i}^{c}\right)=A_{1}\setminus\left(\cap_{i=1}^{\infty}A_{i}\right),
+\]
+we have $\mu\left(\cup_{i=1}^{\infty}B_{i}\right)=\mu\left(A_{1}\right)-\mu\left(\cap_{i=1}^{\infty}A_{i}\right)$.
+In addition,
+\[
+\lim_{n\rightarrow\infty}\mu\left(B_{n}\right)=\lim_{n\rightarrow\infty}\mu\left(A_{1}\cap A_{n}^{c}\right)=\lim_{n\rightarrow\infty}\left(\mu\left(A_{1}\right)-\mu\left(A_{n}\right)\right)=\mu\left(A_{1}\right)-\lim_{n\rightarrow\infty}\mu\left(A_{n}\right).
+\]
+Note that $\ensuremath{B_{1}\subset B_{2}\subset B_{3}\subset\cdots}$.
+By Theorem 1.25 (i) we have
+\[
+\ensuremath{\lim_{n\rightarrow\infty}\mu\left(B_{n}\right)=\mu\left(\cup_{i=1}^{\infty}B_{i}\right)}.
+\]
+Therefore,
+\[
+\mu\left(A_{1}\right)-\lim_{n\rightarrow\infty}\mu\left(A_{n}\right)=\mu\left(A_{1}\right)-\mu\left(\cap_{i=1}^{\infty}A_{i}\right)\Longrightarrow\text{\ensuremath{\lim_{n\rightarrow\infty}\mu\left(A_{n}\right)}=\ensuremath{\mu\left(\cap_{i=1}^{\infty}A_{i}\right)}}.
+\]
+\end{xca}
+
+\section{Construction of Lebesgue Measure}
+\begin{xca}
+Since $\mu^{*}$ is an outer measure, it is countably subadditive.
+Note that $\left(\ensuremath{B\cap E}\right)\cup\left(\ensuremath{B\cap E}^{c}\right)=B$,
+thus
+\[
+\mu^{*}\left(B\right)\leq\mu^{*}\left(B\cap E\right)+\mu^{*}\left(\ensuremath{B\cap E}^{c}\right).
+\]
+If in addition $\mu^{*}\left(B\right)\geq\mu^{*}\left(B\cap E\right)+\mu^{*}\left(\ensuremath{B\cap E}^{c}\right)$,
+it must be that $\mu^{*}\left(B\right)=\mu^{*}\left(B\cap E\right)+\mu^{*}\left(\ensuremath{B\cap E}^{c}\right)$.
+\end{xca}
+%
+\begin{xca}
+Denote $\ensuremath{\mathcal{O}}$ the collection of open sets of
+$\mathbb{R}$. By definition, the Borel $\sigma-$algebra of $\mathbb{R}$
+is the $\sigma-$algebra generated by $\ensuremath{\mathcal{O}}$,
+i.e., $\ensuremath{\mathcal{B}(\mathbb{R})}=\ensuremath{\sigma(\mathcal{O})}$.
+Let $\nu$ be a premeasure on $\ensuremath{\mathbb{R}}$ and $\mu^{*}$
+the outer measure generated by $\nu$, and $\ensuremath{\mathcal{M}}$
+the $\sigma-$algebra from the Caratheodory construction. By Theorem
+2.12, we have $\ensuremath{\mathcal{B}(\mathbb{R})}=\ensuremath{\sigma(\mathcal{O})}\subset\ensuremath{\mathcal{M}}$.
+\end{xca}
+
+\section{Measurable Functions}
+\begin{xca}
+Consider a countable set $\left\{ x_{n}\right\} _{n=1}^{\infty}$.
+Note that $\left\{ x_{n}\right\} \subset\left(x_{n}-\frac{\varepsilon}{2^{n+1}},x_{n}+\frac{\varepsilon}{2^{n+1}}\right],\forall\varepsilon>0$.
+Note that
+\[
+\sum_{n=1}^{\infty}\left[\left(x_{n}+\frac{\varepsilon}{2^{n+1}}\right)-\left(x_{n}-\frac{\varepsilon}{2^{n+1}}\right)\right]=\sum_{n=1}^{\infty}\frac{\varepsilon}{2^{n}}=\varepsilon.
+\]
+By definition of Lebesgue measure,
+\begin{align*}
+\lambda\left(\left\{ x_{n}\right\} _{n=1}^{\infty}\right) & =\inf\left\{ \ensuremath{\sum_{n=1}^{\infty}\left(b_{n}-a_{n}\right):\left\{ x_{n}\right\} _{n=1}^{\infty}\subset\bigcup_{i=1}^{\infty}\left(a_{i},b_{i}\right]}\right\} \\
+ & \leq\inf\left\{ \ensuremath{\sum_{n=1}^{\infty}\left[\left(x_{n}+\frac{\varepsilon}{2^{n+1}}\right)-\left(x_{n}-\frac{\varepsilon}{2^{n+1}}\right)\right]:\left\{ x_{n}\right\} _{n=1}^{\infty}\subset\bigcup_{i=1}^{\infty}\left(x_{n}-\frac{\varepsilon}{2^{n+1}},x_{n}+\frac{\varepsilon}{2^{n+1}}\right]},\varepsilon>0\right\} \\
+ & =\inf\left\{ \ensuremath{\varepsilon:}\varepsilon>0\right\} =0.
+\end{align*}
+Therefore, $\lambda\left(\left\{ x_{n}\right\} _{n=1}^{\infty}\right)=0$.
+\end{xca}
+%
+\begin{xca}
+Since $\mathcal{M}$ is a $\sigma-$algebra, it is closed under complements
+and countable unions.
+\begin{enumerate}
+\item If $\forall a,\ensuremath{\{x\in X:f(x)\geq a\}}\in\mathcal{M}$,
+then its complement $\ensuremath{\{x\in X:f(x)<a\}}\in\mathcal{M}$
+too. So ({*}) can be replaced by $\{x\in X:f(x)\geq a\}$.
+\item If $\forall a,\{x\in X:f(x)>a\}\in\mathcal{M}$, then a countable
+union
+\[
+\cup_{n=1}^{\infty}\{x\in X:f(x)>a+\frac{1}{n}\}=\{x\in X:f(x)\geq a\}
+\]
+is also in $\mathcal{M}$. By (1), ({*}) can by replaced by $\{x\in X:f(x)>a\}$.
+\item If $\forall a,\ensuremath{\{x\in X:f(x)\leq a\}}\in\mathcal{M}$,
+then its complement $\ensuremath{\{x\in X:f(x)>a\}}\in\mathcal{M}$
+too. By (2), ({*}) can by replaced by $\{x\in X:f(x)\leq a\}$.
+\end{enumerate}
+\end{xca}
+%
+\begin{xca}
+$ $
+\begin{itemize}
+\item Let $F\left(f,g\right)=f+g$ which is continuous. By (4), $f+g$ is
+measurable.
+\item Let $F\left(f,g\right)=f\cdot g$ which is continuous. By (4), $f\cdot g$
+is measurable.
+\item Let $f_{n}=f$ for $n$ odd and $f_{n}=g$ for $n$ even. Thus $\sup_{n\in\mathbb{N}}f_{n}(x)=\max\left(f,g\right)$.
+By (2), $\max\left(f,g\right)$ is measurable.
+\item Let $f_{n}=f$ for $n$ odd and $f_{n}=g$ for $n$ even. Thus $\inf_{n\in\mathbb{N}}f_{n}(x)=\min\left(f,g\right)$.
+By (2), $\min\left(f,g\right)$ is measurable.
+\item First, $g\left(x\right)=-1$ is measurable. Thus $-f=f\cdot g$ is
+measurable. Next note that $\left|f\right|=\max\left(f,-f\right)$,
+so $\left|f\right|$ is also measurable.
+\end{itemize}
+\end{xca}
+%
+\begin{xca}
+We construct a partition as in the proof. If $f$ is bounded, $\exists M$
+s.t. $f\left(x\right)<M,\forall x$. For $n>M$, $\forall x\in X$,
+there exists some $i$ s.t. $x\in E_{i}^{n}$. Thus $s_{n}(x)=\frac{i-1}{2^{n}}$
+for this $i$ and $\left|f(x)-s_{n}(x)\right|<\frac{1}{2^{n}}$. $\forall\varepsilon>0$,
+there exists $N\in\mathbb{N}$ s.t. $\frac{1}{2^{N}}<\epsilon$. Therefore,
+$\forall n>\max\left(N,M\right),$we have
+\[
+\left|f(x)-s_{n}(x)\right|<\frac{1}{2^{n}}<\varepsilon,
+\]
+hence the convergence in is uniform.
+\end{xca}
+
+\section{Lebesgue Integration}
+\begin{xca}
+Since $f^{+}=\max\{f(x),0\}\in\left[0,M\right)$, and $\mu\left(E\right)<\infty$,
+then
+\[
+0\leq\int_{E}f^{+}d\mu\leq M\mu\left(E\right)<\infty.
+\]
+Similarly, $f^{-}=\max\{-f(x),0\}\in\left[0,M\right)$, then
+\[
+0\leq\int_{E}f^{-}d\mu\leq M\mu\left(E\right)<\infty.
+\]
+Both $\int_{E}f^{+}d\mu$ and $\int_{E}f^{-}d\mu$ are finite, so
+$f\in\mathscr{L}^{1}(\mu,E)$.
+\end{xca}
+%
+\begin{xca}
+Suppose there exists $X\subset E$ with $\mu\left(X\right)>0$, and
+$f\left(x\right)=\infty,\forall x\in X$. Then
+\[
+\int_{E}\left|f\right|d\mu\geq\int_{A}\left|f\right|d\mu\geq\int_{A}fd\mu=\infty,
+\]
+contradictory to $f$ being integrable.
+\end{xca}
+%
+\begin{xca}
+$f\leq g$ implies that $\{s:0\leq s\leq f,s\text{ simple, measurable \}}\subset\{s:0\leq s\leq g,s\text{ simple, measurable }\}$,
+and thus $\sup\left\{ \int_{E}sd\mu:0\leq s\leq f,s\text{ simple, measurable }\right\} \leq\sup\left\{ \int_{E}sd\mu:0\leq s\leq g,s\text{ simple, measurable }\right\} $.
+By definition this is $\int_{E}fd\mu\leq\int_{E}gd\mu$.
+\end{xca}
+%
+\begin{xca}
+Consider any $s\left(x\right)=\sum_{i=1}^{N}c_{i}\chi_{E}$ simple,
+measurable. $A\subset E$ implies that $A\cap E_{i}\subset E\cap E_{i},\forall i$.
+Hence $\mu\left(A\cap E_{i}\right)\leq\mu\left(E\cap E_{i}\right)$.
+Thus
+\[
+\int_{A}sd\mu=\sum_{i=1}^{N}c_{i}\mu\left(A\cap E_{i}\right)\leq\sum_{i=1}^{N}c_{i}\mu\left(E\cap E_{i}\right)=\int_{E}sd\mu.
+\]
+Therefore,
+\begin{align*}
+\int_{A}f^{+}d\mu & =\sup\left\{ \int_{A}sd\mu:0\leq s\leq f^{+},\text{ s simple, measurable }\right\} \\
+ & \leq\sup\left\{ \int_{E}sd\mu:0\leq s\leq f^{+},\text{ s simple, measurable }\right\} \\
+ & =\int_{E}f^{+}d\mu<\infty,
+\end{align*}
+and similarly $\int_{A}f^{-}d\mu<\infty$. So $f\in\mathscr{L}^{1}(\mu,A)$.
+\end{xca}
+%
+\begin{xca}
+Let $X_{1}=A\cap B$ and $X_{2}=A-B$. Note that $X_{1}\cap X_{2}=\emptyset$
+and $A=X_{1}\cup X_{2}$. Since $B\subset A$, we have $A\cap B=B$.
+Thus
+\[
+\int_{A}fd\mu=\int_{B}fd\mu+\int_{A-B}fd\mu.
+\]
+Since $\mu\left(A-B\right)=0$, by Proposition 4.6 we have $\int_{A-B}fd\mu=0$.
+Therefore $\int_{A}fd\mu=\int_{B}fd\mu$.
+\end{xca}
+
+\end{document}
