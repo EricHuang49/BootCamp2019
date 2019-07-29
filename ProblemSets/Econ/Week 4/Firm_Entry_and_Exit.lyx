@@ -1,0 +1,949 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\setcounter{section}{0}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Firm Entry and Exit (Clementi and Palazzo AEJ Macro 2016)
+\end_layout
+
+\begin_layout Author
+Jincheng(Eric) Huang
+\end_layout
+
+\begin_layout Section
+Statement of the problems
+\end_layout
+
+\begin_layout Subsection
+Timeline
+\end_layout
+
+\begin_layout Standard
+Beginning of period: incumbent firms make exiting decisions.
+ Potential entrants decide whether to enter.
+\end_layout
+
+\begin_layout Standard
+End of period: incumbent firms make investment and hiring decisions.
+ Entrants draw idiosyncratic productivities.
+\end_layout
+
+\begin_layout Subsection
+Incumbent firms' problem
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathbf{s}$
+\end_inset
+
+ be the aggregate state variable.
+ Incumbent firms' state variables are: 
+\begin_inset Formula $\epsilon,k,\mathbf{s}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+First, define the (end-of-period) value of exiting firms.
+ Denote the value of such firms as 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+V_{x}(k)=(1-\delta)k
+\]
+
+\end_inset
+
+The values comes from the sale of depreciated capital stock net of adjustment
+ cost.
+\end_layout
+
+\begin_layout Standard
+Second, define the (end-of-period) value of active incumbent firms.
+ Denote the value of such firms as 
+\begin_inset Formula $\tilde{V}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align}
+\tilde{V}(\epsilon,k,\mathbf{s}) & =\max_{i}\pi(\epsilon,k,\mathbf{s})-i-\mathbf{1}\{k>0\}\frac{\varphi}{2}\Bigg(\frac{i}{k}\Bigg)^{2}k+\mathbb{E}_{\mathbf{s'},\epsilon'}\Big[\Lambda(\mathbf{s}';\mathbf{s})V(\epsilon',k',\mathbf{s}')\Big]\label{eq:incumbent firm eop}\\
+\text{s.t. }k' & =(1-\delta)k+i\nonumber 
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is the profit function defined by
+\begin_inset Formula 
+\[
+\pi(\epsilon,k,\mathbf{s})=\max_{n}e^{\epsilon}k^{\theta}n^{\nu}-w(\mathbf{s})n
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\Lambda(\mathbf{s}';\mathbf{s})$
+\end_inset
+
+ is the stochastic discount factor (SDF) of the households which own the
+ firms (discussed in detail later).
+ The active incumbent firms produce, invest for the next period and pay
+ capital adjustment costs.
+\end_layout
+
+\begin_layout Standard
+Next, let's define the value of the incumbent firm at the beginning of the
+ period (before investment, labor and exit decisions).
+ Denote the value at the beginning of the period as 
+\begin_inset Formula $V$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{equation}
+V(\epsilon,k,\mathbf{s})=\max\Big\{\tilde{V}(\epsilon,k,\mathbf{s})-c_{f},V_{x}(k)\Big\}\label{eq:incumbent problem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so the incumbent firm with capital level 
+\begin_inset Formula $k$
+\end_inset
+
+ and productivity 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ at the beginning of each period chooses to stay active if and only if 
+\begin_inset Formula $\tilde{V}(\epsilon,k,\mathbf{s})-c_{f}\geq V_{x}(k)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Entrants' problem
+\end_layout
+
+\begin_layout Standard
+First, define the value of the entrants that have paid the fixed entry cost.
+ This type of firms are essentially incumbent firms with 
+\begin_inset Formula $k=0$
+\end_inset
+
+.
+ Therefore the value function is:
+\begin_inset Formula 
+\[
+\tilde{V}(\epsilon,0,\mathbf{s})=\max_{k'}-k'+\mathbb{E}_{\mathbf{s'},\epsilon'}\Big[\Lambda(\mathbf{s}';\mathbf{s})V(\epsilon',k',\mathbf{s})\Big]
+\]
+
+\end_inset
+
+It draws a current-period productivity 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ from some distribution 
+\begin_inset Formula $\nu$
+\end_inset
+
+ and chooses next period's capital 
+\begin_inset Formula $k'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Second, define the ex-ante value of potential entrants.
+ Denote it as 
+\begin_inset Formula $V_{e}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{equation}
+V_{e}(\mathbf{s})=\max\Big\{\int_{\epsilon}\tilde{V}(\epsilon,0,\mathbf{s})\nu(d\epsilon)-c_{e},0\Big\}\label{eq:entrant problem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The potential entrant chooses to enter if the expected value net of entry
+ cost, 
+\begin_inset Formula $\int_{\epsilon}\tilde{V}(\epsilon,0,\mathbf{s})\nu(d\epsilon)-c_{e}$
+\end_inset
+
+, is positive.
+\end_layout
+
+\begin_layout Subsection
+Households' problem
+\end_layout
+
+\begin_layout Standard
+The representative household does not own capital, so its decision is static.
+ In each period, the household solves
+\begin_inset Formula 
+\begin{align*}
+\max_{C,N} & \log C-aN\\
+\text{s.t.} & C=wN+\pi
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is firms' aggregate profit in the period.
+ The representative household discounts the value of future consumption
+ according to the SDF 
+\begin_inset Formula $\Lambda(\mathbf{s'};\mathbf{s})=\beta\frac{c'}{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Aggregate state variables
+\end_layout
+
+\begin_layout Standard
+Aggregate state variables 
+\begin_inset Formula $\mathbf{s}$
+\end_inset
+
+ determine the aggregate supply and demand of capital and labor and come
+ into play in market clearing.
+ Therefore 
+\begin_inset Formula $\mathbf{s}$
+\end_inset
+
+ should include the whole distribution of incumbent firms 
+\begin_inset Formula $g(\epsilon,k)$
+\end_inset
+
+ at the beginning of each period.
+\end_layout
+
+\begin_layout Section
+Definition of the steady state recursive competitive equilibrium
+\end_layout
+
+\begin_layout Standard
+The steady state recursive competitive equilibrium of this economy is a
+ set of incumbent value functions 
+\begin_inset Formula $V(\epsilon,k,\mathbf{s})$
+\end_inset
+
+, entrant value functions 
+\begin_inset Formula $V_{e}(\mathbf{s})$
+\end_inset
+
+, policy functions 
+\begin_inset Formula $k'(\epsilon,k,\mathbf{s})$
+\end_inset
+
+ and 
+\begin_inset Formula $n(\epsilon,k,s)$
+\end_inset
+
+ for incumbent firms, a mass of entrants per period 
+\begin_inset Formula $m^{*}$
+\end_inset
+
+, a measure of active firms at the beginning of the period 
+\begin_inset Formula $g^{*}(\epsilon,k)$
+\end_inset
+
+, prices 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Lambda^{*}$
+\end_inset
+
+ and household policies 
+\begin_inset Formula $N(\mathbf{s}),C(\mathbf{s})$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Enumerate
+Given prices 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Lambda^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $V(\epsilon,k,\mathbf{s})$
+\end_inset
+
+, 
+\begin_inset Formula $k'(\epsilon,k,\mathbf{s})$
+\end_inset
+
+ and 
+\begin_inset Formula $n(\epsilon,k,s)$
+\end_inset
+
+ solve the incumbent value maximization problem in equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incumbent problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V_{e}(\mathbf{s})$
+\end_inset
+
+, 
+\begin_inset Formula $k'(\epsilon,0,\mathbf{s})$
+\end_inset
+
+ and 
+\begin_inset Formula $m^{*}$
+\end_inset
+
+ solve the entrants' free-entry condition, which sets the value function
+ in equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:entrant problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to 0.
+\end_layout
+
+\begin_layout Enumerate
+Market clearing:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $N(\mathbf{s})=\int_{k}\int_{\epsilon}n(\epsilon,k,\mathbf{s})g(\epsilon,k)d\epsilon dk$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C(\mathbf{s})=\int y(\epsilon,k)-\Big[k'(\epsilon,k,s)-(1-\delta)k\Big]g(\epsilon,k)d\epsilon dk$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Lambda^{*}(\mathbf{s'};\mathbf{s})=\beta\frac{C(\mathbf{s'})}{C(\mathbf{s})}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consistency: 
+\begin_inset Formula $g^{*}(\epsilon',k')=\int_{\epsilon}\int_{k}\Big[\mathbf{1}\{\rho\epsilon+\omega=\epsilon'\}\times\mathbf{1}\{k'(\epsilon,k,\mathbf{s})=k'\}\times\mathbf{1}\{\tilde{V}(\epsilon,k,\mathbf{s})-c_{f}\geq V_{x}(k)\}\Big]p(\omega)g(\epsilon,k)d\omega d\epsilon dk+\int_{\epsilon}m^{*}\Big[\mathbf{1}\{\rho\epsilon+\omega=\epsilon'\}\times\mathbf{1}\{k'(\epsilon,0,\mathbf{s})\}\Big]p(\omega)\nu(d\epsilon)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Solve for representative agent steady state
+\end_layout
+
+\begin_layout Standard
+In steady state, the incumbent is characterized by a representative firm
+ with productivity equal to the mean value of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, which is 0.
+ The total mass of active firms is constant, which means that incumbent
+ firms don't exit and potential entrants don't enter.
+\end_layout
+
+\begin_layout Standard
+The steps to compute the steady state equilibrium are the following:
+\end_layout
+
+\begin_layout Enumerate
+Guess an equilibrium wage 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Get value and policy functions 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $k'^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $n^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Use the policy functions to compute stationary distribution 
+\begin_inset Formula $g^{*}(\epsilon,k)$
+\end_inset
+
+ by iterating law of motion
+\end_layout
+
+\begin_layout Enumerate
+Compute labor demand based on the stationary distribution
+\end_layout
+
+\begin_layout Enumerate
+Update guess of 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+ based on excess labor supply/demand.
+\end_layout
+
+\begin_layout Standard
+To get the policy functions in steady state, we need to solve for the incumbent
+ firms' FOC and Euler equations at steady state, i.e.
+ when 
+\begin_inset Formula $\epsilon=\epsilon'=0$
+\end_inset
+
+ and 
+\begin_inset Formula $k=k'=k^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Incumbent firms' first order condition
+\end_layout
+
+\begin_layout Standard
+From the FOC of the incumbent firm's end-of-period problem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incumbent firm eop"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\begin{align}
+-1-\mathbf{1}\{k>0\}\varphi\frac{i}{k}+\mathbb{E}[\Lambda(\mathbf{s}';\mathbf{s})V_{k}(\epsilon,k',\mathbf{s})] & =0\label{eq:FOC}
+\end{align}
+
+\end_inset
+
+In steady state, 
+\begin_inset Formula $k^{*}=(1-\delta)k^{*}+i^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon'=\epsilon=0$
+\end_inset
+
+, and 
+\begin_inset Formula $g(\epsilon,k)$
+\end_inset
+
+ is constant.
+ Therefore get
+\begin_inset Formula 
+\begin{equation}
+-1-\varphi\delta+\beta V_{k}(k^{*})=0\label{eq:FOC_ss}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Incumbent firms' envelope condition
+\end_layout
+
+\begin_layout Standard
+Using envelope condition from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incumbent firm eop"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we get
+\begin_inset Formula 
+\begin{align}
+\tilde{V}_{k}(\epsilon,k,\mathbf{s}) & =\pi_{k}(\epsilon,k,\mathbf{s})+(1-\delta)-\mathbf{1}\{k>0\}\frac{\varphi}{2}\Bigg[-2\frac{i}{k}+\Bigg(\frac{i}{k}\Bigg)^{2}\Bigg]\nonumber \\
+ & =\pi_{k}(\epsilon,k,\mathbf{s})+(1-\delta)-\mathbf{1}\{k>0\}\frac{\varphi}{2}\Bigg\{\Bigg[\frac{k'(\epsilon,k,\mathbf{s})}{k}-(1-\delta)\Bigg]^{2}-2\frac{k'(\epsilon,k,\mathbf{s})}{k}\Bigg[\frac{k'(\epsilon,k,\mathbf{s})}{k}-(1-\delta)\Bigg]\Bigg\}\label{eq:envelope 1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and since 
+\begin_inset Formula $\pi(\epsilon,k,\mathbf{s})=\max_{n}e^{\epsilon}k^{\theta}n^{\nu}-w(\mathbf{s})n$
+\end_inset
+
+, then by profit maximization we have
+\begin_inset Formula 
+\begin{align*}
+\nu e^{\epsilon}k^{\theta}n^{\nu-1}-w(\mathbf{s}) & =0\\
+\Rightarrow n & =\Bigg(\frac{w(\mathbf{s})}{\nu e^{\epsilon}k^{\theta}}\Bigg)^{1/(\nu-1)}
+\end{align*}
+
+\end_inset
+
+and therefore 
+\begin_inset Formula 
+\begin{equation}
+\pi_{k}(\epsilon,k,\mathbf{s})=\theta e^{\epsilon}k^{\theta-1}\Bigg(\frac{w(\mathbf{s})}{\nu e^{\epsilon}k^{\theta}}\Bigg)^{\nu/(\nu-1)}\label{eq:pi_k}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In steady state, the envelope condition becomes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\tilde{V}_{k}(k^{*}) & =\pi_{k}(k^{*})+(1-\delta)-\frac{\varphi}{2}(\delta^{2}-2\delta)\nonumber \\
+ & =\pi_{k}(k^{*})+\frac{\varphi}{2}\delta^{2}+(\varphi-1)\delta+1\label{eq:envelope 1_ss}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In addition, from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incumbent problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we can get two choice-specific envelope conditions:
+\begin_inset Formula 
+\begin{align}
+V_{k}(\epsilon,k,\mathbf{s}) & =\tilde{V}_{k}(\epsilon,k,\mathbf{s})\text{ if stay}\label{eq:envelope 2}\\
+V_{k}(\epsilon,k,\mathbf{s}) & =1-\delta\text{ if exit}\nonumber 
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+since in steady state no incumbent firm exits, then from the envelope condition
+ of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:incumbent problem"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we have
+\begin_inset Formula 
+\begin{equation}
+V_{k}(k^{*})=\tilde{V}_{k}(k^{*})\label{eq:envelope 2_ss}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Incumbent firm's Euler equation
+\end_layout
+
+\begin_layout Standard
+Combining 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:FOC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:envelope 1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:envelope 2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we get two choice-specific Euler equations:
+\begin_inset Formula 
+\begin{align}
+-1-\mathbf{1}\{k>0\}\varphi\Bigg[\frac{k'(\epsilon,k,\mathbf{s})}{k}-(1-\delta)\Bigg]+\mathbb{E}\Bigg\{\Lambda(\mathbf{s}';\mathbf{s})\Bigg\{\theta e^{\epsilon'}k'^{\theta-1}\Bigg(\frac{w(\mathbf{s}')}{\nu e^{\epsilon'}k'^{\theta}}\Bigg)^{\nu/(\nu-1)}\nonumber \\
++(1-\delta)-\mathbf{1}\{k'>0\}\frac{\varphi}{2}\Bigg\{\Bigg[\frac{k'(\epsilon,k',\mathbf{s})}{k'}-(1-\delta)\Bigg]^{2}-2\frac{k'(\epsilon,k',\mathbf{s})}{k'}\Bigg[\frac{k'(\epsilon,k',\mathbf{s})}{k'}-(1-\delta)\Bigg]\Bigg\}\Bigg\}\Bigg\} & =0\text{ if stay}\label{eq:Euler_stay}\\
+-1-\varphi\Bigg[\frac{k'(\epsilon,k,\mathbf{s})}{k'}-(1-\delta)\Bigg]+\mathbb{E}[\Lambda(\mathbf{s}';\mathbf{s})(1-\delta)] & =0\text{ if exit}\label{eq:Euler_exit}
+\end{align}
+
+\end_inset
+
+In steady state, the Euler equation becomes
+\begin_inset Formula 
+\[
+-1-\varphi\delta+\beta\Bigg[k^{*\theta-1}\Bigg(\frac{w^{*}}{\nu k^{*\theta}}\Bigg)^{\nu/(\nu-1)}-\frac{\varphi}{2}\delta^{2}-(\varphi+1)\delta+1\Bigg]=0
+\]
+
+\end_inset
+
+From which we can get the capital policy function 
+\begin_inset Formula $k'(\cdot)=k^{*}$
+\end_inset
+
+ in the steady state.
+\end_layout
+
+\begin_layout Section
+Solve for incumbent firms' decision rules
+\end_layout
+
+\begin_layout Standard
+For now, we set 
+\begin_inset Formula $w^{*}=w_{rep}^{*}$
+\end_inset
+
+ we solved in the pervious part.
+ Since wage is now fixed, household does not face uncertainty so that marginal
+ utility is constant.
+ Therefore the SDF, 
+\begin_inset Formula $\Lambda(\mathbf{s}';\mathbf{s})=\beta$
+\end_inset
+
+.
+ In addition, the distribution of firms should be fixed because there is
+ no aggregate shock, so we can omit the aggregate state variable 
+\begin_inset Formula $\mathbf{s}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can use the endogenous grid method (EGM) to solve for incumbent firm's
+ decision.
+ The steps can be described as follows:
+\end_layout
+
+\begin_layout Enumerate
+Define a grid 
+\begin_inset Formula $G_{k}=\{k_{1},k_{2},...,k_{n}\}$
+\end_inset
+
+ for capital in the next period and 
+\begin_inset Formula $G_{\epsilon}=\{\epsilon_{1},\epsilon_{2},...,\epsilon_{m}\}$
+\end_inset
+
+, and guess the incumbent firms' end-of-period value function 
+\begin_inset Formula $\tilde{V}(\epsilon,k)=\tilde{V}^{0}(\epsilon,k)$
+\end_inset
+
+ on all capital and productivity grid points.
+ Then derive the value function at the beginning of period 
+\begin_inset Formula $V(\epsilon,k)=V^{0}(\epsilon,k)=\max\Big\{\tilde{V}^{0}(\epsilon,k)-c_{f},V_{x}(k)\Big\}$
+\end_inset
+
+.
+ Also guess the capital policy function 
+\begin_inset Formula $k'^{0}(\epsilon,k)$
+\end_inset
+
+ on the grid.
+\end_layout
+
+\begin_layout Enumerate
+For step 
+\begin_inset Formula $i$
+\end_inset
+
+, use the policy function 
+\begin_inset Formula $k'^{i}(\epsilon,k)$
+\end_inset
+
+ to get capital 2 periods ahead 
+\begin_inset Formula $k'(\epsilon',k')$
+\end_inset
+
+.
+ Then, for any pair 
+\begin_inset Formula $(\epsilon,k')$
+\end_inset
+
+ on the mesh grid, we use the choice-specific Euler equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Euler_stay"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to solve for capital this period 
+\begin_inset Formula $\tilde{k}(\epsilon,k')$
+\end_inset
+
+ that leads to 
+\begin_inset Formula $k'$
+\end_inset
+
+ in the next period, conditional on firms being active in the next period.
+ In this way we generate an endogenous capital grid 
+\begin_inset Formula $k_{end}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\tilde{V}^{i}(\epsilon,\tilde{k}(\epsilon,k'))=\pi(\epsilon,\tilde{k}(\epsilon,k'))-[k'-(1-\delta)\tilde{k}(\epsilon,k')]-\mathbf{1}\{\tilde{k}(\epsilon,k')>0\}\frac{\varphi}{2}\Bigg[\frac{k'}{\tilde{k}(\epsilon,k')}-(1-\delta)\Bigg]^{2}\tilde{k}(\epsilon,k')+\beta\mathbb{E}_{\epsilon'}\Big[V^{i}(\epsilon',k')\Big]$
+\end_inset
+
+, choice-specific value function defined on 
+\begin_inset Formula $k_{end}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find the 
+\begin_inset Formula $k$
+\end_inset
+
+ such that 
+\begin_inset Formula $\tilde{V}(\epsilon,k)-c_{f}=V_{x}(k)=(1-\delta)k$
+\end_inset
+
+.
+ Call it 
+\begin_inset Formula $\hat{k}'(\epsilon)$
+\end_inset
+
+.
+ Then for 
+\begin_inset Formula $k<\hat{k}'(\epsilon)$
+\end_inset
+
+, firms would choose to exit.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Use linear interpolation to get new guess for policy function 
+\begin_inset Formula $k'^{i+1}(\epsilon,k)$
+\end_inset
+
+ on grid points 
+\begin_inset Formula $k_{i}\geq\hat{k}'(\epsilon)$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $k_{i}<\hat{k}'(\epsilon)$
+\end_inset
+
+, 
+\begin_inset Formula $k'^{i+1}(\epsilon,k)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Use linear interpolation to get 
+\begin_inset Formula $\tilde{V}^{i+1}(\epsilon,k)$
+\end_inset
+
+ defined on original grid points, and therefore get 
+\begin_inset Formula $V^{i+1}(\epsilon,k)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Check if 
+\begin_inset Formula $\max_{\epsilon,k}\Big|V^{i+1}(\epsilon,k)-V^{i}(\epsilon,k)\Big|\leq\epsilon$
+\end_inset
+
+.
+ If so, stop.
+ Otherwise, go back to step 3.
+\end_layout
+
+\end_body
+\end_document
