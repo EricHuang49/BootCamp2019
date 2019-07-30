@@ -433,6 +433,22 @@ noprefix "false"
 \end_layout
 
 \begin_layout Enumerate
+Given 
+\begin_inset Formula $w^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $C(\mathbf{s})$
+\end_inset
+
+ and 
+\begin_inset Formula $N(\mathbf{s})$
+\end_inset
+
+ solve the households' problem.
+\end_layout
+
+\begin_layout Enumerate
 Market clearing:
 \end_layout
 
@@ -635,7 +651,7 @@ and since
 and therefore 
 \begin_inset Formula 
 \begin{equation}
-\pi_{k}(\epsilon,k,\mathbf{s})=\theta e^{\epsilon}k^{\theta-1}\Bigg(\frac{w(\mathbf{s})}{\nu e^{\epsilon}k^{\theta}}\Bigg)^{\nu/(\nu-1)}\label{eq:pi_k}
+\pi_{k}(\epsilon,k,\mathbf{s})=\theta e^{\epsilon}k{}^{\theta-1}\Bigg(\frac{w(\mathbf{s})}{\nu e^{\epsilon}k{}^{\theta}}\Bigg)^{\nu/(\nu-1)}\label{eq:pi_k}
 \end{equation}
 
 \end_inset
@@ -744,7 +760,7 @@ noprefix "false"
 \begin_inset Formula 
 \begin{align}
 -1-\mathbf{1}\{k>0\}\varphi\Bigg[\frac{k'(\epsilon,k,\mathbf{s})}{k}-(1-\delta)\Bigg]+\mathbb{E}\Bigg\{\Lambda(\mathbf{s}';\mathbf{s})\Bigg\{\theta e^{\epsilon'}k'^{\theta-1}\Bigg(\frac{w(\mathbf{s}')}{\nu e^{\epsilon'}k'^{\theta}}\Bigg)^{\nu/(\nu-1)}\nonumber \\
-+(1-\delta)-\mathbf{1}\{k'>0\}\frac{\varphi}{2}\Bigg\{\Bigg[\frac{k'(\epsilon,k',\mathbf{s})}{k'}-(1-\delta)\Bigg]^{2}-2\frac{k'(\epsilon,k',\mathbf{s})}{k'}\Bigg[\frac{k'(\epsilon,k',\mathbf{s})}{k'}-(1-\delta)\Bigg]\Bigg\}\Bigg\}\Bigg\} & =0\text{ if stay}\label{eq:Euler_stay}\\
++(1-\delta)-\mathbf{1}\{k'>0\}\frac{\varphi}{2}\Bigg\{\Bigg[\frac{k'(\epsilon',k',\mathbf{s})}{k'}-(1-\delta)\Bigg]^{2}-2\frac{k'(\epsilon',k',\mathbf{s})}{k'}\Bigg[\frac{k'(\epsilon;,k',\mathbf{s})}{k'}-(1-\delta)\Bigg]\Bigg\}\Bigg\}\Bigg\} & =0\text{ if stay}\label{eq:Euler_stay}\\
 -1-\varphi\Bigg[\frac{k'(\epsilon,k,\mathbf{s})}{k'}-(1-\delta)\Bigg]+\mathbb{E}[\Lambda(\mathbf{s}';\mathbf{s})(1-\delta)] & =0\text{ if exit}\label{eq:Euler_exit}
 \end{align}
 
@@ -753,7 +769,7 @@ noprefix "false"
 In steady state, the Euler equation becomes
 \begin_inset Formula 
 \[
--1-\varphi\delta+\beta\Bigg[k^{*\theta-1}\Bigg(\frac{w^{*}}{\nu k^{*\theta}}\Bigg)^{\nu/(\nu-1)}-\frac{\varphi}{2}\delta^{2}-(\varphi+1)\delta+1\Bigg]=0
+-1-\varphi\delta+\beta\Bigg[\theta k^{*\theta-1}\Bigg(\frac{w^{*}}{\nu k^{*\theta}}\Bigg)^{\nu/(\nu-1)}-\frac{\varphi}{2}\delta^{2}+(\varphi-1)\delta+1\Bigg]=0
 \]
 
 \end_inset
