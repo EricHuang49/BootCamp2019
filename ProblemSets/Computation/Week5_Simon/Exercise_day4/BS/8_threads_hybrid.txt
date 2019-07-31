@@ -1,0 +1,38 @@
+make: *** No rule to make target `1a.hello_world_hybrid.cpp', needed by `1a.hello_world_hybrid.exec'.  Stop.
+------------------------------------------------------------------------- 
+Number of Paths: 100000000
+Underlying:      100
+Strike:          100
+Risk-Free Rate:  0.05
+Volatility:      0.2
+Maturity:        1
+Call Price:      0
+Put Price:       2.07516e-317
+Time: 206.319
+Number of Paths: 100000000
+Underlying:      100
+Strike:          100
+Risk-Free Rate:  0.05
+Volatility:      0.2
+Maturity:        1
+Put Price:       5.57724
+Call Price:      10.453
+Time it took: 80.8708
+Number of Paths: 100000000
+Underlying:      100
+Strike:          100
+Risk-Free Rate:  0.05
+Volatility:      0.2
+Maturity:        1
+Put Price:       5.57486
+Call Price:      10.4541
+Time it took: 41.0879
+Number of Paths: 100000000
+Underlying:      100
+Strike:          100
+Risk-Free Rate:  0.05
+Volatility:      0.2
+Maturity:        1
+Call Price:      10.4553
+Time it took: 20.5299
+Put Price:       5.57546
